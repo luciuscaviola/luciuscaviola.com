@@ -1,11 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=https://luciuscaviola.com" />
-  <title>Redirecting...</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucius Caviola</title>
+    <meta name="description" content="Lucius Caviola — Moral psychologist at Oxford University studying the societal impact of artificial intelligence">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 40px;
+            font-size: 15px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 35px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .logo a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .tagline {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 18px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 0.95rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        
+        nav a:hover,
+        nav a.active {
+            border-bottom-color: #333;
+        }
+        
+        main {
+            padding: 50px 0;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 35px;
+            align-items: start;
+        }
+        
+        .profile-image {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .bio p {
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+        }
+        
+        .bio a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .bio a:hover {
+            text-decoration: underline;
+        }
+        
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 25px 0 12px 0;
+            color: #333;
+        }
+        
+        ul {
+            margin-left: 18px;
+            margin-bottom: 18px;
+        }
+        
+        li {
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+        
+        .project-card {
+            border-radius: 12px;
+            padding: 30px;
+            margin: 25px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .project-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .project-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+        }
+        
+        .project-description {
+            color: #555;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+        
+        .project-description a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .project-description a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Alternate layout for second card */
+        .project-card:nth-child(odd) {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .project-card:nth-child(even) {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .project-card:nth-child(even) .project-image {
+            order: 2;
+        }
+        
+        .project-card:nth-child(even) .project-content {
+            order: 1;
+        }
+        
+        .newsletter-embed {
+            margin: 35px 0;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .newsletter-embed iframe {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        footer {
+            border-top: 1px solid #eee;
+            padding: 35px 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+        
+        .social-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #333;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 0 25px;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .profile-image {
+                max-width: 200px;
+                margin: 0 auto;
+                display: block;
+            }
+            
+            .logo {
+                font-size: 1.7rem;
+            }
+            
+            nav ul {
+                gap: 18px;
+            }
+            
+            .project-card {
+                grid-template-columns: 1fr !important;
+                gap: 20px;
+                padding: 25px;
+            }
+            
+            .project-card:nth-child(even) .project-image,
+            .project-card:nth-child(even) .project-content {
+                order: unset;
+            }
+            
+            .project-image {
+                max-width: 200px;
+                margin: 0 auto;
+            }
+            
+            .project-content {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 0 20px;
+            }
+            
+            header {
+                padding: 25px 0;
+            }
+            
+            main {
+                padding: 35px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-  <p>If you are not redirected automatically, <a href="https://luciuscaviola.com">click here</a>.</p>
+    <header>
+        <h1 class="logo">
+            <a href="/">Lucius Caviola</a>
+        </h1>
+        
+        <nav>
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/research">Research</a></li>
+                <li><a href="/publications">Publications</a></li>
+                <li><a href="https://outpaced.substack.com" target="_blank">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-grid">
+            <div class="bio">
+                <p>I am a moral psychologist at the University of Oxford, studying the societal impact of artificial intelligence. My research examines how human values and decision-making shape—and are shaped by—AI systems. I aim to generate insights that help us understand and navigate the large-scale risks and opportunities that AI introduces.</p>
+                
+                <p>Beyond AI, my work focuses on prosociality, investigating how people expand their moral boundaries—extending compassion effectively beyond their immediate communities to distant populations, animals, and even potential future digital minds.</p>
+                
+                <p>You can reach me at lucius.caviola@gmail.com, on <a href="https://x.com/LuciusCaviola" target="_blank">X</a>, or by sharing your <a href="https://admonymous.co/lucius" target="_blank">anonymous feedback</a>.</p>
+                
+                <h3>Selected Recent Research</h3>
+                <ul>
+                    <li><a href="https://arxiv.org/abs/2502.00388" target="_blank">The Societal Response to Potentially Sentient AI</a></li>
+                    <li><a href="https://osf.io/preprints/psyarxiv/gtr53" target="_blank">Crying wolf: Warning about societal risks can be reputationally risky</a></li>
+                </ul>
+            </div>
+            
+            <div class="profile-section">
+                <img src="https://images.squarespace-cdn.com/content/v1/59e80366a9db098f5ce8f8ad/fb9bab72-aeb6-4bc6-8e18-d31338390578/LuciusCaviola.jpg" alt="Lucius Caviola" class="profile-image">
+            </div>
+        </div>
+
+        <div class="newsletter-embed">
+            <iframe src="https://outpaced.substack.com/embed" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <div class="project-card">
+            <img src="givingmultiplier.png" alt="Giving Multiplier" class="project-image">
+            <div class="project-content">
+                <div class="project-title">Charitable Giving Project</div>
+                <div class="project-description">
+                    I co-created <a href="https://givingmultiplier.org/">Giving Multiplier</a>, a donation platform designed to introduce people to effective giving. It is based on <a href="https://www.science.org/doi/10.1126/sciadv.ade7987">research</a> by Joshua Greene and myself, has fundraised $4 million for charities, received an award by the <a href="https://www.openideo.com/challenge-briefs/reimagine-charitable-giving-challenge">Gates Foundation</a>, and was featured in the <a href="https://www.latimes.com/opinion/story/2020-12-17/effective-altruism-charity-psychology-morality-donation">LA Times</a>, <a href="https://www.marketwatch.com/story/for-giving-tuesday-a-tool-helps-you-give-to-the-most-effective-charities-without-criticizing-your-values-11638282037" target="_blank">MarketWatch</a>, and <a href="https://www.vox.com/future-perfect/22177289/best-meaningful-holiday-gift-charity-donations">Vox</a>.
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="https://images.squarespace-cdn.com/content/v1/59e80366a9db098f5ce8f8ad/26796736-e95e-4f6a-91b8-0b548ee1cea5/9780197757376.jpg" alt="Book cover" class="project-image" style="max-width: 200px; margin: 0 auto;">
+            <div class="project-content">
+                <div class="project-title">Book</div>
+                <div class="project-description">
+                    Together with my colleague Stefan Schubert, I recently published an academic book on the psychology of effective altruism at Oxford University Press. <em>Effective Altruism and the Human Mind</em> builds on decades of psychological research. It explains why people often don't choose the most effective strategies to help others and explores what can be done to change that. The <a href="https://academic.oup.com/book/56384" target="_blank">book</a> and its <a href="https://open.spotify.com/show/7kSJ4aCd2dCqMsAOi2Liaz" target="_blank">audiobook version</a> are available for free.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://twitter.com/LuciusCaviola" target="_blank">Twitter</a>
+            <a href="mailto:lucius.caviola@gmail.com">Email</a>
+        </div>
+    </footer>
 </body>
 </html>
