@@ -272,3 +272,149 @@ footer {
         padding: 35px 0;
     }
 }
+
+
+
+/* Research page specific styles */
+.research-content {
+    max-width: 100%;
+}
+
+.research-content p {
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.research-content a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.research-content a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 35px 0 18px 0;
+    color: #333;
+}
+
+.research-question {
+    margin-bottom: 25px;
+}
+
+.research-question strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.about-section {
+    margin-top: 40px;
+    padding-top: 35px;
+    border-top: 1px solid #eee;
+}
+
+.intro-text {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* Additional mobile styles for research page */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+/* Publications page specific styles */
+.section {
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.section:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+.section:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 8px;
+}
+
+.publication {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+}
+
+.publication:not(:last-child) {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.pub-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.pub-title a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.pub-title a:hover {
+    text-decoration: underline;
+}
+
+.pub-authors {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 2px;
+}
+
+.pub-journal {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 4px;
+}
+
+.pub-note {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.pub-links {
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.pub-links a {
+    color: #0066cc;
+    text-decoration: none;
+    margin-right: 12px;
+}
+
+.pub-links a:hover {
+    text-decoration: underline;
+}
+
+/* Additional mobile styles for publications page */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.2rem;
+    }
+}
